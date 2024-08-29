@@ -1,0 +1,26 @@
+[package]
+name = "arabic-normalize"
+version = "0.1.0"
+edition = "2021"
+authors = ["Abdeldjalil Chougui"]
+license = "MIT"
+description = "Fast Arabic text normalization for search: diacritics, tatweel, letter variants, digits, Persian letters, light stemming"
+keywords = ["arabic", "normalization", "nlp", "search", "unicode"]
+categories = ["text-processing", "internationalization"]
+readme = "README.md"
+repository = "https://github.com/AbdeldjalilChougui/arabic-normalize"
+homepage = "https://github.com/AbdeldjalilChougui/arabic-normalize"
+include = ["src/**/*", "benches/**/*", "Cargo.toml", "Cargo.lock", "README.md", "LICENSE", "CITATION.cff"]
+
+[workspace]
+members = [".", "python"]
+
+[dependencies]
+
+[dev-dependencies]
+proptest = "1"
+criterion = { version = "0.5", default-features = false }
+
+[[bench]]
+name = "normalize"
+harness = false
