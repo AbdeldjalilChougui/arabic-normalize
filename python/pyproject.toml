@@ -1,0 +1,25 @@
+[build-system]
+requires = ["maturin>=1.5,<2"]
+build-backend = "maturin"
+
+[project]
+name = "arabic-normalize"
+version = "0.1.0"
+description = "Fast Arabic text normalization for search (Rust core)"
+license = { text = "MIT" }
+authors = [{ name = "Abdeldjalil Chougui" }]
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: 3",
+    "Natural Language :: Arabic",
+    "Topic :: Text Processing :: Linguistic",
+]
+
+[project.urls]
+Homepage = "https://github.com/AbdeldjalilChougui/arabic-normalize"
+Repository = "https://github.com/AbdeldjalilChougui/arabic-normalize"
+Issues = "https://github.com/AbdeldjalilChougui/arabic-normalize/issues"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
